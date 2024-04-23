@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+  <h1><center>
+  <input type="text" id="val1">
+  <p id="simbol"></p>
+  <br>
+  <input type="text" id="val2">
+  <br>
+  <button id="tambah">+</button>
+  <br>
+  <button id="kurang">-</button>
+  <br>
+  <button id="bagi">/</button>
+  <br>
+  <button id="kali">*</button>
+  <br>
+  <button id="hitung">Hitung</button>
+  <br>
+  <p id="result"></p>
+</h1></center>
+<script>
+    document.querySelector("#tambah").addEventListener("click", function() {
+    document.querySelector("#simbol").textContent = "+"
+    document.querySelector("#hitung").addEventListener("click", function() {
+    let val1 = document.querySelector("#val1").value;
+    let val2 = document.querySelector("#val2").value;
+    let result = parseInt(val1) + parseInt(val2);
+    document.querySelector("#result").textContent = "Hasil: " + result;
+    });
+});
+document.querySelector("#kurang").addEventListener("click", function() {
+    document.querySelector("#simbol").textContent = "-"
+    document.querySelector("#hitung").addEventListener("click", function() {
+    let val1 = document.querySelector("#val1").value;
+    let val2 = document.querySelector("#val2").value;
+    let result = parseInt(val1) - parseInt(val2);
+    document.querySelector("#result").textContent = "Hasil: " + result;
+    });
+});
+document.querySelector("#bagi").addEventListener("click", function() {
+    document.querySelector("#simbol").textContent = "/"
+    document.querySelector("#hitung").addEventListener("click", function() {
+    let val1 = document.querySelector("#val1").value;
+    let val2 = document.querySelector("#val2").value;
+    let result = parseInt(val1) / parseInt(val2);
+    document.querySelector("#result").textContent = "Hasil: " + result;
+    });
+});
+document.querySelector("#kali").addEventListener("click", function() {
+    document.querySelector("#simbol").textContent = "*"
+    document.querySelector("#hitung").addEventListener("click", function() {
+    let val1 = document.querySelector("#val1").value;
+    let val2 = document.querySelector("#val2").value;
+    let result = parseInt(val1) * parseInt(val2);
+    document.querySelector("#result").textContent = "Hasil: " + result;
+    });
+});
+</script>
+</body>
+</html>
